@@ -169,8 +169,8 @@
 
   heroCarouselItems.forEach((item, index) => {
     (index === 0) ?
-    heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "' class='active'></li>":
-      heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
+    heroCarouselIndicators.innerHTML += "":
+      heroCarouselIndicators.innerHTML += ""
   });
 
   /**
@@ -181,7 +181,8 @@
     if (menuContainer) {
       let menuIsotope = new Isotope(menuContainer, {
         itemSelector: '.menu-item',
-        layoutMode: 'fitRows'
+        layoutMode: 'fitRows',
+        filter: '.filter-starters'
       });
 
       let menuFilters = select('#menu-flters li', true);
